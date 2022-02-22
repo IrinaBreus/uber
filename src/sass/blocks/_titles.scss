@@ -1,0 +1,27 @@
+.title {
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222222;
+    margin-top: 36px;
+    &_white {
+        color: #FFFFFF;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 16px;
+        margin-top: 16px;
+        &_mini {
+            font-size: 15px;
+        }
+    }
+}

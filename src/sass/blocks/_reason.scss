@@ -1,0 +1,112 @@
+.reason {
+    padding: 18px 0 62px 0;
+    min-height: 850px;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 70px;
+        margin-top: 28px;
+    }
+    &__block {
+        display: flex;
+        min-height: 150px;
+        justify-content: space-between;
+        align-items: center;
+
+        &_round {
+            min-width: 116px;
+            height: 116px;
+            background: #1EACC7;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s;
+            &:hover {
+                transform: scaleX(-1);
+            }
+        }
+        &_descr {
+            max-width: 372px;
+            .subtitle {
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 21px;
+                color: #1EACC7;
+            }
+            .txt {
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 21px;
+                color: #202020;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .reason {
+        &__grid {
+            gap: 32px 50px;
+        }
+        &__block {
+            &_descr {
+            max-width: 310px;
+            }
+        }
+        
+    }
+}
+@media (max-width: 992px) {
+    .reason {
+        &__block {
+            flex-direction: column;
+            justify-content: flex-start;
+            &_descr {
+                margin-top: 20px;
+                text-align: justify;
+                .subtitle {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .reason {
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 50px 0;
+        }
+        &__block_descr {
+                max-width: 100%;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .reason {
+        padding: 22px 0 38px 0;
+        min-height: 246px;
+        &__grid {
+            gap: 23px 0;
+            margin-top: 24px;
+        }
+        &__block {
+            &_round {
+                min-width: 100px;
+                height: 100px;
+            }
+            &_descr {
+                padding: 0 15px 0 15px;
+                .subtitle {
+                    font-size: 16px;
+                    text-align: left;
+                }
+                .txt {
+                    text-align: left;
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+}
